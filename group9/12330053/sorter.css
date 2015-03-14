@@ -1,0 +1,31 @@
+table,tr,td,thead,th{
+    border: 1px solid;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+thead{
+    background-color: darkblue;
+}
+th{
+    color: white;
+    text-align: left;
+}
+
+.ascend{
+    background-image: url(ascend.png);
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+.descend{
+    background-image: url(descend.png);
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+#staff th{
+    width: 120px;
+}
