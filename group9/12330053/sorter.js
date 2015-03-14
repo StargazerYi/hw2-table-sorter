@@ -10,14 +10,18 @@ var sortSeq = new Array(0,0,0,0,0,0);
  *	@var sortSeq
  *	@brief 用于存储table中6个column被点击过的次数
  */
+
 var origin = new Array();
+/**
+ *	@var origin
+ *	@brief 用于存储原始的数组排列
+ */
+
 var symbol = document.createElement("div");
-
-function test(){
-    var k = arguments[0];
-    console.log(k);
-}
-
+/**
+ *	@var symbol
+ *	@brief 出现箭头的div
+ */
 
 
 function dSort(){
@@ -177,6 +181,12 @@ function descend(num){
 }
 
 function setColor(){
+    /**
+     * @fn      setColor()
+     * @brief   给表格隔行渲染灰色颜色
+     * @parm    无
+     * @return  无
+     */
     for (k in array1){
         array1[k].bgColor = "white";
     }
@@ -188,6 +198,12 @@ function setColor(){
 }
 
 function showAscend(col,table){
+    /**
+     * @fn      showAscend()
+     * @brief   出现升序时的箭头
+     * @parm    col 用于确定哪一列;table 用于确定是哪一个table
+     * @return  无
+     */
     var cur;
     if (table == 2) {
         cur = document.getElementById("staff").firstElementChild.firstElementChild.firstElementChild;
@@ -206,6 +222,12 @@ function showAscend(col,table){
 }
 
 function showDescend(col,table){
+    /**
+     * @fn      showDescend()
+     * @brief   出现降序时的箭头
+     * @parm    col 用于确定哪一列;table 用于确定是哪一个table
+     * @return  无
+     */
     var cur;
     if (table == 2) {
         cur = document.getElementById("staff").firstElementChild.firstElementChild.firstElementChild;
@@ -223,6 +245,12 @@ function showDescend(col,table){
 }
 
 function recover(col,table){
+    /**
+     * @fn      recover()
+     * @brief   用于清除箭头
+     * @parm    col 用于确定哪一列;table 用于确定是哪一个table
+     * @return  无
+     */
     var cur;
     if (table == 2) {
         cur = document.getElementById("staff").firstElementChild.firstElementChild.firstElementChild;
@@ -239,6 +267,12 @@ function recover(col,table){
 }
 
 function clearColor(){
+    /**
+     * @fn      clearColor()
+     * @brief   用于把表头的颜色转换清除
+     * @parm    无
+     * @return  无
+     */
     var cur1 = document.getElementById("staff").firstElementChild.firstElementChild.firstElementChild;
     var cur2 =document.getElementById("todo").firstElementChild.firstElementChild.firstElementChild;
     for(var c=0;c<3;c++){
@@ -251,6 +285,12 @@ function clearColor(){
 }
 
 function getAllTables(){
+    /**
+     * @fn      getAllTables()
+     * @brief   把页面的tableDOM存在对象数组中
+     * @parm    无
+     * @return  获得的table
+     */
     var table = new Array();
     //第一个表格
     var todo = document.getElementById("todo");
@@ -308,6 +348,12 @@ function makeAllTablesSortable(tables){
 }
 
 window.onload = function () {
+    /**
+     * @fn      onload()
+     * @brief   js的入口函数
+     * @parm    无
+     * @return  无
+     */
     var tables = getAllTables();
     makeAllTablesSortable(tables);
 }
