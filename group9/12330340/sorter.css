@@ -1,5 +1,5 @@
 body {
-	font-family: Georgia;
+	font-family: Georgia, sans-serif;
 }
 
 table {
@@ -13,7 +13,6 @@ th {
 	text-align: left;
 	font-weight: bold;
 	border: 1px solid #BBB;
-	border-spacing: -1px;
 	padding: 3px 22px 3px 4px;
 	background-color: rgb(4, 26, 128);
 	color: white;
